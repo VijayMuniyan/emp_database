@@ -1,0 +1,43 @@
+<%= form_with(model: database) do |form| %>
+  <% if database.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(database.errors.count, "error") %> prohibited this database from being saved:</h2>
+
+      <ul>
+        <% database.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+
+    <%= form.text_field :First_Name, class:"form-control", placeholder:"First_Name" %><br/>
+  </div>
+
+  <div class="field form-group">
+
+    <%= form.text_field :Last_Name, class:"form-control", placeholder:"Last_Name" %><br/>
+  </div>
+
+  <div class="field form-group">
+
+    <%= form.text_field :Age, class:"form-control", placeholder:"Age" %><br/>
+  </div>
+
+  <div class="field form-group">
+
+    <%= form.text_field :Gender, class:"form-control", placeholder:"Gender"%><br/>
+  </div>
+
+  <div class="field form-group">
+
+    <%= form.text_field :Designation, class:"form-control", placeholder:"Designation" %>
+  </div>
+  <br/>
+
+  <div class="actions">
+    <%= form.submit class:'btn btn-secondary'%>
+  </div>
+<% end %>

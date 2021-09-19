@@ -1,0 +1,28 @@
+<div class="container">
+
+
+<div class="jumbotron">
+  <h1 class="display-4"><%= @database.First_Name %>
+    <%= @database.Last_Name %></h1>
+  <p class="lead"><p>
+    <strong>Gender:</strong>
+    <%= @database.Gender %>
+  </p>
+  <p>
+    <strong>Gender:</strong>
+    <%= @database.Gender %>
+  </p>
+
+  <p>
+    <strong>Designation:</strong>
+    <%= @database.Designation %>
+  </p>
+
+  <p class="lead">
+    <%= link_to 'Edit', edit_database_path(@database), class:"btn btn-dark" %>
+    <%= link_to 'Back', databases_path, class:"btn btn-dark" %>
+
+  </p>
+
+</div>
+</div>
